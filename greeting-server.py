@@ -35,7 +35,7 @@ class GreetServerInterface(paramiko.ServerInterface):
         return True
 
 
-@click.command(help="Echo server")
+@click.command(help="Greeting server")
 @click.option(
     "-h", "--host", default="localhost", show_default=True, help="SSH server host"
 )

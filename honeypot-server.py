@@ -38,7 +38,9 @@ class HoneypotInterface(paramiko.ServerInterface):
         print(f"PTY request for channel {channel.chanid}: {term} {width}x{height}")
         return True
 
-    def check_channel_exec_request(self, channel: paramiko.Channel, command: bytes) -> bool:
+    def check_channel_exec_request(
+        self, channel: paramiko.Channel, command: bytes
+    ) -> bool:
         print(f"Attempting to execute command on channel {channel.chanid}: {command!r}")
         return True
 
@@ -90,7 +92,7 @@ class HoneypotInterface(paramiko.ServerInterface):
         return res
 
 
-@click.command(help="Echo server")
+@click.command(help="Honeypot server")
 @click.option(
     "-h", "--host", default="localhost", show_default=True, help="SSH server host"
 )
