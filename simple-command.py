@@ -29,7 +29,7 @@ def main(host, port, username, password, command, args):
     print(stdout.read().decode())
 
     print("STDERR:")
-    print(stdout.read().decode())
+    print(stderr.read().decode())
 
     print("Return code:", stdout.channel.recv_exit_status())
 
