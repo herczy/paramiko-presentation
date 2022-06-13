@@ -45,8 +45,6 @@ Contents
 
 * **greeting-server.py** - Server example that greets you when you log in
 
-* **honeypot-server.py** - Server that accepts all password logins and does nothing
-
 * **echo-subsystem.py** - Simple echo server demonstrating SSH subsystems
 
 Note for help
